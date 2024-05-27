@@ -1,0 +1,22 @@
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  footer .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  footer .social-media img {
+    width: 20px;
+    height: 20px;
+  }

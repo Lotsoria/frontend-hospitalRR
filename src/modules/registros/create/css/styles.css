@@ -1,0 +1,141 @@
+/* Contenedor del stepper */
+.stepper-container {
+  min-width: 300px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del stepper */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  flex: 1;
+  padding: 10px 20px;
+  margin: 0 5px;
+  text-align: center;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.step.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.step:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Contenido del paso */
+.step-content {
+  margin-bottom: 20px;
+}
+
+.step-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.step-content input,
+.step-content select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.step-content input:focus,
+.step-content select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.step-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Información del paciente */
+.step-content .info-paciente {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+
+.step-content .info-paciente h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.step-content .info-paciente p {
+  margin: 5px 0;
+}
+
+/* Estilo del mensaje de error */
+.step-content .error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Navegación del stepper */
+.stepper-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepper-navigation button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.stepper-navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.stepper-navigation button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.step-content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.step-content button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.step-content button:not(:disabled):hover {
+  background-color: #0056b3;
+}

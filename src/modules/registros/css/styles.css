@@ -1,0 +1,96 @@
+/* Contenedor principal */
+.containerRegistrosComponent {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* La barra lateral tiene un ancho fijo, el contenido principal toma el resto del espacio */
+  width: 100%;
+  height: calc(100vh - 70px); /* Ajusta el alto según tu header y footer */
+}
+
+/* Estilos básicos para el sidebar */
+.sidebar {
+  background-color: #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100%;
+}
+
+/* Estilos para la lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los elementos de la lista */
+.sidebar li {
+  width: 100%;
+}
+
+/* Estilos para los enlaces */
+.sidebar a, .sidebar Link {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+/* Estilos para las imágenes en los enlaces */
+.sidebar a img, .sidebar Link img {
+  width: 24px; /* Tamaño de la imagen */
+  height: 24px;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el estado hover de los enlaces */
+.sidebar a:hover, .sidebar Link:hover {
+  background-color: #459af5;
+  color: #fff;
+}
+
+/* Estilos para el estado activo de los enlaces */
+.sidebar a:active, .sidebar Link:active {
+  background-color: #133a64;
+}
+
+/* Contenido principal */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ajustado para iniciar desde arriba */
+  align-items: flex-start; /* Ajustado para iniciar desde la izquierda */
+  padding: 20px;
+  overflow-y: auto; /* Añadido scroll vertical si el contenido es grande */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .containerRegistrosComponent {
+    grid-template-columns: 1fr; /* Barra lateral y contenido principal en una sola columna */
+  }
+  
+  .sidebar {
+    height: auto;
+    flex-direction: row; /* Cambia la dirección a fila */
+    overflow-x: auto; /* Añade scroll horizontal para la barra lateral */
+  }
+  
+  .sidebar ul {
+    flex-direction: row; /* Cambia la dirección de los elementos de la lista a fila */
+  }
+  
+  .sidebar li {
+    display: inline-block;
+  }
+  
+  .content {
+    padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
+  }
+}
